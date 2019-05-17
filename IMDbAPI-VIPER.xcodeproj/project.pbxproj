@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA5B95F054AE2DF701D85BDB /* Pods_IMDbAPI_VIPER.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B413101F45F9CBA2D0D33C1 /* Pods_IMDbAPI_VIPER.framework */; };
 		EA84A5DF228EA4EA009E7955 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA84A5DE228EA4EA009E7955 /* AppDelegate.swift */; };
 		EA84A5E1228EA4EA009E7955 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA84A5E0228EA4EA009E7955 /* SearchViewController.swift */; };
 		EA84A5E4228EA4EA009E7955 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA84A5E2228EA4EA009E7955 /* Search.storyboard */; };
@@ -21,9 +22,13 @@
 		EA84A607228EA9A9009E7955 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA84A606228EA9A9009E7955 /* SearchInteractor.swift */; };
 		EA84A609228EA9B7009E7955 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA84A608228EA9B7009E7955 /* SearchPresenter.swift */; };
 		EA84A60B228EA9C6009E7955 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA84A60A228EA9C6009E7955 /* SearchRouter.swift */; };
+		EA84A60E228EAA92009E7955 /* IMDbAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA84A60D228EAA92009E7955 /* IMDbAPIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B413101F45F9CBA2D0D33C1 /* Pods_IMDbAPI_VIPER.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMDbAPI_VIPER.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74265E5B8D63B34C07DAD4C7 /* Pods-IMDbAPI-VIPER.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMDbAPI-VIPER.release.xcconfig"; path = "Target Support Files/Pods-IMDbAPI-VIPER/Pods-IMDbAPI-VIPER.release.xcconfig"; sourceTree = "<group>"; };
+		939B35CDFD51C6550D09841D /* Pods-IMDbAPI-VIPER.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMDbAPI-VIPER.debug.xcconfig"; path = "Target Support Files/Pods-IMDbAPI-VIPER/Pods-IMDbAPI-VIPER.debug.xcconfig"; sourceTree = "<group>"; };
 		EA84A5DB228EA4EA009E7955 /* IMDbAPI-VIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IMDbAPI-VIPER.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA84A5DE228EA4EA009E7955 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA84A5E0228EA4EA009E7955 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +45,7 @@
 		EA84A606228EA9A9009E7955 /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
 		EA84A608228EA9B7009E7955 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
 		EA84A60A228EA9C6009E7955 /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
+		EA84A60D228EAA92009E7955 /* IMDbAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMDbAPIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,17 +53,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA5B95F054AE2DF701D85BDB /* Pods_IMDbAPI_VIPER.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08AB3F57A18351F1170F99EC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				939B35CDFD51C6550D09841D /* Pods-IMDbAPI-VIPER.debug.xcconfig */,
+				74265E5B8D63B34C07DAD4C7 /* Pods-IMDbAPI-VIPER.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C697314A47ED47E66A421A6E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6B413101F45F9CBA2D0D33C1 /* Pods_IMDbAPI_VIPER.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EA84A5D2228EA4EA009E7955 = {
 			isa = PBXGroup;
 			children = (
 				EA84A5DD228EA4EA009E7955 /* IMDbAPI-VIPER */,
 				EA84A5DC228EA4EA009E7955 /* Products */,
+				08AB3F57A18351F1170F99EC /* Pods */,
+				C697314A47ED47E66A421A6E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,6 +107,7 @@
 				EA84A5F1228EA53C009E7955 /* Scenes */,
 				EA84A5F2228EA548009E7955 /* Resources */,
 				EA84A5F7228EA5BF009E7955 /* Supporting Files */,
+				EA84A5EA228EA4EB009E7955 /* Info.plist */,
 			);
 			path = "IMDbAPI-VIPER";
 			sourceTree = "<group>";
@@ -113,6 +141,7 @@
 		EA84A5F3228EA593009E7955 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				EA84A60D228EAA92009E7955 /* IMDbAPIService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -144,7 +173,6 @@
 			isa = PBXGroup;
 			children = (
 				EA84A5E7228EA4EB009E7955 /* LaunchScreen.storyboard */,
-				EA84A5EA228EA4EB009E7955 /* Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -178,9 +206,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA84A5ED228EA4EB009E7955 /* Build configuration list for PBXNativeTarget "IMDbAPI-VIPER" */;
 			buildPhases = (
+				66DBA6E38B05F448B8C22EA7 /* [CP] Check Pods Manifest.lock */,
 				EA84A5D7228EA4EA009E7955 /* Sources */,
 				EA84A5D8228EA4EA009E7955 /* Frameworks */,
 				EA84A5D9228EA4EA009E7955 /* Resources */,
+				DA4F75C28CC618A566F743CF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -237,6 +267,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		66DBA6E38B05F448B8C22EA7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IMDbAPI-VIPER-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA4F75C28CC618A566F743CF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IMDbAPI-VIPER/Pods-IMDbAPI-VIPER-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IMDbAPI-VIPER/Pods-IMDbAPI-VIPER-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EA84A5D7228EA4EA009E7955 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -244,6 +327,7 @@
 			files = (
 				EA84A5E1228EA4EA009E7955 /* SearchViewController.swift in Sources */,
 				EA84A5FC228EA6B0009E7955 /* AppContainer.swift in Sources */,
+				EA84A60E228EAA92009E7955 /* IMDbAPIService.swift in Sources */,
 				EA84A60B228EA9C6009E7955 /* SearchRouter.swift in Sources */,
 				EA84A609228EA9B7009E7955 /* SearchPresenter.swift in Sources */,
 				EA84A601228EA8A5009E7955 /* RoundedView.swift in Sources */,
@@ -396,6 +480,7 @@
 		};
 		EA84A5EE228EA4EB009E7955 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 939B35CDFD51C6550D09841D /* Pods-IMDbAPI-VIPER.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -414,6 +499,7 @@
 		};
 		EA84A5EF228EA4EB009E7955 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74265E5B8D63B34C07DAD4C7 /* Pods-IMDbAPI-VIPER.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
