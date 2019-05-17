@@ -8,21 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		EA84A5DF228EA4EA009E7955 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA84A5DE228EA4EA009E7955 /* AppDelegate.swift */; };
-		EA84A5E1228EA4EA009E7955 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA84A5E0228EA4EA009E7955 /* ViewController.swift */; };
-		EA84A5E4228EA4EA009E7955 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA84A5E2228EA4EA009E7955 /* Main.storyboard */; };
+		EA84A5E1228EA4EA009E7955 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA84A5E0228EA4EA009E7955 /* SearchViewController.swift */; };
+		EA84A5E4228EA4EA009E7955 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA84A5E2228EA4EA009E7955 /* Search.storyboard */; };
 		EA84A5E6228EA4EB009E7955 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA84A5E5228EA4EB009E7955 /* Assets.xcassets */; };
 		EA84A5E9228EA4EB009E7955 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA84A5E7228EA4EB009E7955 /* LaunchScreen.storyboard */; };
 		EA84A5FA228EA6A7009E7955 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA84A5F9228EA6A7009E7955 /* AppRouter.swift */; };
 		EA84A5FC228EA6B0009E7955 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA84A5FB228EA6B0009E7955 /* AppContainer.swift */; };
 		EA84A5FE228EA7AC009E7955 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA84A5FD228EA7AC009E7955 /* BaseNavigationController.swift */; };
 		EA84A601228EA8A5009E7955 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA84A600228EA8A5009E7955 /* RoundedView.swift */; };
+		EA84A603228EA98D009E7955 /* SearchBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA84A602228EA98D009E7955 /* SearchBuilder.swift */; };
+		EA84A605228EA99C009E7955 /* SearchContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA84A604228EA99C009E7955 /* SearchContracts.swift */; };
+		EA84A607228EA9A9009E7955 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA84A606228EA9A9009E7955 /* SearchInteractor.swift */; };
+		EA84A609228EA9B7009E7955 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA84A608228EA9B7009E7955 /* SearchPresenter.swift */; };
+		EA84A60B228EA9C6009E7955 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA84A60A228EA9C6009E7955 /* SearchRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EA84A5DB228EA4EA009E7955 /* IMDbAPI-VIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IMDbAPI-VIPER.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA84A5DE228EA4EA009E7955 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EA84A5E0228EA4EA009E7955 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EA84A5E3228EA4EA009E7955 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EA84A5E0228EA4EA009E7955 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		EA84A5E3228EA4EA009E7955 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Search.storyboard; sourceTree = "<group>"; };
 		EA84A5E5228EA4EB009E7955 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA84A5E8228EA4EB009E7955 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA84A5EA228EA4EB009E7955 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -30,6 +35,11 @@
 		EA84A5FB228EA6B0009E7955 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
 		EA84A5FD228EA7AC009E7955 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		EA84A600228EA8A5009E7955 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		EA84A602228EA98D009E7955 /* SearchBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBuilder.swift; sourceTree = "<group>"; };
+		EA84A604228EA99C009E7955 /* SearchContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchContracts.swift; sourceTree = "<group>"; };
+		EA84A606228EA9A9009E7955 /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
+		EA84A608228EA9B7009E7955 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		EA84A60A228EA9C6009E7955 /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,8 +152,13 @@
 		EA84A5F8228EA5E4009E7955 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				EA84A5E2228EA4EA009E7955 /* Main.storyboard */,
-				EA84A5E0228EA4EA009E7955 /* ViewController.swift */,
+				EA84A5E2228EA4EA009E7955 /* Search.storyboard */,
+				EA84A5E0228EA4EA009E7955 /* SearchViewController.swift */,
+				EA84A602228EA98D009E7955 /* SearchBuilder.swift */,
+				EA84A604228EA99C009E7955 /* SearchContracts.swift */,
+				EA84A606228EA9A9009E7955 /* SearchInteractor.swift */,
+				EA84A608228EA9B7009E7955 /* SearchPresenter.swift */,
+				EA84A60A228EA9C6009E7955 /* SearchRouter.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -216,7 +231,7 @@
 			files = (
 				EA84A5E9228EA4EB009E7955 /* LaunchScreen.storyboard in Resources */,
 				EA84A5E6228EA4EB009E7955 /* Assets.xcassets in Resources */,
-				EA84A5E4228EA4EA009E7955 /* Main.storyboard in Resources */,
+				EA84A5E4228EA4EA009E7955 /* Search.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,24 +242,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA84A5E1228EA4EA009E7955 /* ViewController.swift in Sources */,
+				EA84A5E1228EA4EA009E7955 /* SearchViewController.swift in Sources */,
 				EA84A5FC228EA6B0009E7955 /* AppContainer.swift in Sources */,
+				EA84A60B228EA9C6009E7955 /* SearchRouter.swift in Sources */,
+				EA84A609228EA9B7009E7955 /* SearchPresenter.swift in Sources */,
 				EA84A601228EA8A5009E7955 /* RoundedView.swift in Sources */,
+				EA84A607228EA9A9009E7955 /* SearchInteractor.swift in Sources */,
+				EA84A603228EA98D009E7955 /* SearchBuilder.swift in Sources */,
 				EA84A5DF228EA4EA009E7955 /* AppDelegate.swift in Sources */,
 				EA84A5FE228EA7AC009E7955 /* BaseNavigationController.swift in Sources */,
 				EA84A5FA228EA6A7009E7955 /* AppRouter.swift in Sources */,
+				EA84A605228EA99C009E7955 /* SearchContracts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		EA84A5E2228EA4EA009E7955 /* Main.storyboard */ = {
+		EA84A5E2228EA4EA009E7955 /* Search.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				EA84A5E3228EA4EA009E7955 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Search.storyboard;
 			sourceTree = "<group>";
 		};
 		EA84A5E7228EA4EB009E7955 /* LaunchScreen.storyboard */ = {
