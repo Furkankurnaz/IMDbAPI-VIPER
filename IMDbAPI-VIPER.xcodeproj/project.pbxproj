@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		AA5B95F054AE2DF701D85BDB /* Pods_IMDbAPI_VIPER.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B413101F45F9CBA2D0D33C1 /* Pods_IMDbAPI_VIPER.framework */; };
+		EA363BCE228EC0C00050F9B6 /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA363BCD228EC0C00050F9B6 /* SearchModel.swift */; };
+		EA363BD0228EC0C60050F9B6 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA363BCF228EC0C60050F9B6 /* Media.swift */; };
 		EA84A5DF228EA4EA009E7955 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA84A5DE228EA4EA009E7955 /* AppDelegate.swift */; };
 		EA84A5E1228EA4EA009E7955 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA84A5E0228EA4EA009E7955 /* SearchViewController.swift */; };
 		EA84A5E4228EA4EA009E7955 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA84A5E2228EA4EA009E7955 /* Search.storyboard */; };
@@ -29,6 +31,8 @@
 		6B413101F45F9CBA2D0D33C1 /* Pods_IMDbAPI_VIPER.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMDbAPI_VIPER.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74265E5B8D63B34C07DAD4C7 /* Pods-IMDbAPI-VIPER.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMDbAPI-VIPER.release.xcconfig"; path = "Target Support Files/Pods-IMDbAPI-VIPER/Pods-IMDbAPI-VIPER.release.xcconfig"; sourceTree = "<group>"; };
 		939B35CDFD51C6550D09841D /* Pods-IMDbAPI-VIPER.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMDbAPI-VIPER.debug.xcconfig"; path = "Target Support Files/Pods-IMDbAPI-VIPER/Pods-IMDbAPI-VIPER.debug.xcconfig"; sourceTree = "<group>"; };
+		EA363BCD228EC0C00050F9B6 /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
+		EA363BCF228EC0C60050F9B6 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		EA84A5DB228EA4EA009E7955 /* IMDbAPI-VIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IMDbAPI-VIPER.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA84A5DE228EA4EA009E7955 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA84A5E0228EA4EA009E7955 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -66,7 +70,6 @@
 				939B35CDFD51C6550D09841D /* Pods-IMDbAPI-VIPER.debug.xcconfig */,
 				74265E5B8D63B34C07DAD4C7 /* Pods-IMDbAPI-VIPER.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -76,6 +79,23 @@
 				6B413101F45F9CBA2D0D33C1 /* Pods_IMDbAPI_VIPER.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA363BCB228EC08E0050F9B6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EA363BCC228EC0B10050F9B6 /* Search */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EA363BCC228EC0B10050F9B6 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				EA363BCD228EC0C00050F9B6 /* SearchModel.swift */,
+				EA363BCF228EC0C60050F9B6 /* Media.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		EA84A5D2228EA4EA009E7955 = {
@@ -104,6 +124,7 @@
 				EA84A5F5228EA5A3009E7955 /* Utils */,
 				EA84A5F4228EA59B009E7955 /* Views */,
 				EA84A5F3228EA593009E7955 /* Network */,
+				EA363BCB228EC08E0050F9B6 /* Models */,
 				EA84A5F1228EA53C009E7955 /* Scenes */,
 				EA84A5F2228EA548009E7955 /* Resources */,
 				EA84A5F7228EA5BF009E7955 /* Supporting Files */,
@@ -325,7 +346,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA363BCE228EC0C00050F9B6 /* SearchModel.swift in Sources */,
 				EA84A5E1228EA4EA009E7955 /* SearchViewController.swift in Sources */,
+				EA363BD0228EC0C60050F9B6 /* Media.swift in Sources */,
 				EA84A5FC228EA6B0009E7955 /* AppContainer.swift in Sources */,
 				EA84A60E228EAA92009E7955 /* IMDbAPIService.swift in Sources */,
 				EA84A60B228EA9C6009E7955 /* SearchRouter.swift in Sources */,
