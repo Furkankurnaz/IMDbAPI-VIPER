@@ -15,6 +15,7 @@
 		EA84A5FA228EA6A7009E7955 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA84A5F9228EA6A7009E7955 /* AppRouter.swift */; };
 		EA84A5FC228EA6B0009E7955 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA84A5FB228EA6B0009E7955 /* AppContainer.swift */; };
 		EA84A5FE228EA7AC009E7955 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA84A5FD228EA7AC009E7955 /* BaseNavigationController.swift */; };
+		EA84A601228EA8A5009E7955 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA84A600228EA8A5009E7955 /* RoundedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		EA84A5F9228EA6A7009E7955 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		EA84A5FB228EA6B0009E7955 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
 		EA84A5FD228EA7AC009E7955 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		EA84A600228EA8A5009E7955 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 		EA84A5F4228EA59B009E7955 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EA84A5FF228EA88B009E7955 /* CustomViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -143,6 +146,14 @@
 				EA84A5E0228EA4EA009E7955 /* ViewController.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		EA84A5FF228EA88B009E7955 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				EA84A600228EA8A5009E7955 /* RoundedView.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +229,7 @@
 			files = (
 				EA84A5E1228EA4EA009E7955 /* ViewController.swift in Sources */,
 				EA84A5FC228EA6B0009E7955 /* AppContainer.swift in Sources */,
+				EA84A601228EA8A5009E7955 /* RoundedView.swift in Sources */,
 				EA84A5DF228EA4EA009E7955 /* AppDelegate.swift in Sources */,
 				EA84A5FE228EA7AC009E7955 /* BaseNavigationController.swift in Sources */,
 				EA84A5FA228EA6A7009E7955 /* AppRouter.swift in Sources */,
