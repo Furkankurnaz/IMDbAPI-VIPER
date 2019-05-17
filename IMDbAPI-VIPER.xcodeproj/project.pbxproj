@@ -54,14 +54,86 @@
 		EA84A5DD228EA4EA009E7955 /* IMDbAPI-VIPER */ = {
 			isa = PBXGroup;
 			children = (
+				EA84A5F0228EA536009E7955 /* App */,
+				EA84A5F6228EA5AB009E7955 /* Base */,
+				EA84A5F5228EA5A3009E7955 /* Utils */,
+				EA84A5F4228EA59B009E7955 /* Views */,
+				EA84A5F3228EA593009E7955 /* Network */,
+				EA84A5F1228EA53C009E7955 /* Scenes */,
+				EA84A5F2228EA548009E7955 /* Resources */,
+				EA84A5F7228EA5BF009E7955 /* Supporting Files */,
+			);
+			path = "IMDbAPI-VIPER";
+			sourceTree = "<group>";
+		};
+		EA84A5F0228EA536009E7955 /* App */ = {
+			isa = PBXGroup;
+			children = (
 				EA84A5DE228EA4EA009E7955 /* AppDelegate.swift */,
-				EA84A5E0228EA4EA009E7955 /* ViewController.swift */,
-				EA84A5E2228EA4EA009E7955 /* Main.storyboard */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		EA84A5F1228EA53C009E7955 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				EA84A5F8228EA5E4009E7955 /* Search */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		EA84A5F2228EA548009E7955 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				EA84A5E5228EA4EB009E7955 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EA84A5F3228EA593009E7955 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		EA84A5F4228EA59B009E7955 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EA84A5F5228EA5A3009E7955 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		EA84A5F6228EA5AB009E7955 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		EA84A5F7228EA5BF009E7955 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				EA84A5E7228EA4EB009E7955 /* LaunchScreen.storyboard */,
 				EA84A5EA228EA4EB009E7955 /* Info.plist */,
 			);
-			path = "IMDbAPI-VIPER";
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA84A5F8228EA5E4009E7955 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				EA84A5E2228EA4EA009E7955 /* Main.storyboard */,
+				EA84A5E0228EA4EA009E7955 /* ViewController.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
