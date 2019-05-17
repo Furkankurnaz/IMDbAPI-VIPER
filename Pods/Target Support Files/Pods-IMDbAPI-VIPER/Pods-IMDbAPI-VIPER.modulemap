@@ -1,0 +1,6 @@
+framework module Pods_IMDbAPI_VIPER {
+  umbrella header "Pods-IMDbAPI-VIPER-umbrella.h"
+
+  export *
+  module * { export * }
+}
