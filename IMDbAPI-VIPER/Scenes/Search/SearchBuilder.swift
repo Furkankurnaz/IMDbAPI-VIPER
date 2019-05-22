@@ -15,8 +15,8 @@ final class SearchBuilder {
         let router = SearchRouter(view: view)
         let interactor = SearchInteractor()
         let presenter = SearchPresenter(view: view,
-                                           interactor: interactor,
-                                           router: router)
+                                        interactor: interactor,
+                                        router: router)
         view.presenter = presenter
         return view
     }
