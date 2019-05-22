@@ -6,4 +6,20 @@
 //  Copyright © 2019 Furkan Kurnaz. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+final class SearchRouter: SearchRouterProtocol {
+    
+    unowned let view: UIViewController
+    
+    init(view: UIViewController) {
+        self.view = view
+    }
+    
+    func navigate(to route: SearchRoute) {
+        switch route {
+        case .list(let searchModel):
+           break//
+        }
+    }
+}

@@ -16,9 +16,9 @@ protocol SeachViewProtocol: class {
 
 // MARK: - Interactor
 
-protocol SearchInteratorProtocol: class {
+protocol SearchInteractorProtocol: class {
     var delegate: SearchInteractorDelegate? { get set }
-    func load()
+    func load(title: String, type: String?, year: String?)
 }
 
 protocol SearchInteractorDelegate: class {
@@ -32,8 +32,8 @@ enum SearchInteractorOutput {
 
 // MARK: - Presenter
 
-protocol SearchListPresenterProtocol: class {
-    func load()
+protocol SearchPresenterProtocol: class {
+    func load(title: String, type: String?, year: String?)
 }
 
 enum SearchPresenterOutput {

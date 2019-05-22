@@ -7,3 +7,36 @@
 //
 
 import Foundation
+
+final class SearchPresenter: SearchPresenterProtocol {
+    
+    private unowned let view: SeachViewProtocol
+    private let interactor: SearchInteractorProtocol
+    private let router: SearchRouterProtocol
+    
+    init(view: SeachViewProtocol,
+         interactor: SearchInteractorProtocol,
+         router: SearchRouterProtocol) {
+        self.view = view
+        self.interactor = interactor
+        self.router = router
+        
+        self.interactor.delegate = self
+    }
+    
+    func load(title: String, type: String?, year: String?) {
+        view.handleOutput(.updateTitle("IMDb Search"))
+        interactor.load(title: title, type: type, year: year)
+    }
+}
+
+extension SearchPresenter: SearchInteractorDelegate {
+    func handleOutput(_ output: SearchInteractorOutput) {
+        switch output {
+        case .setLoading(let isLoading):
+            view.handleOutput(.setLoading(isLoading))
+        case .showMediaList(let medias):
+            view.handleOutput(.showMediaList(medias))
+        }
+    }
+}

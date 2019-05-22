@@ -13,7 +13,7 @@
         <!--Search View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SearchViewController" customModule="IMDbAPI_VIPER" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchViewController" id="BYZ-38-t0r" customClass="SearchViewController" customModule="IMDbAPI_VIPER" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,6 +39,9 @@
                                 <state key="normal" title="Filters...">
                                     <color key="titleColor" red="0.93802756070000004" green="0.76603406669999996" blue="0.003720242297" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="filtersButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QqR-7F-c0U"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJo-kc-6gF">
                                 <rect key="frame" x="170" y="307" width="35" height="35"/>
@@ -47,8 +50,11 @@
                                     <constraint firstAttribute="height" constant="35" id="kq6-UY-2Pt"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="search"/>
+                                <connections>
+                                    <action selector="searchButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xVy-LI-EPN"/>
+                                </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gPQ-3Z-qxx" customClass="RoundedView" customModule="iMDbAPI" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gPQ-3Z-qxx" customClass="RoundedView" customModule="IMDbAPI_VIPER" customModuleProvider="target">
                                 <rect key="frame" x="20" y="302" width="335" height="128"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yc6-1O-ECM">
@@ -63,6 +69,9 @@
                                         <state key="normal" title="Pick...">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="pickButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eoD-UR-c5E"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Year :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J48-Vp-7g0">
                                         <rect key="frame" x="20" y="58" width="52" height="22"/>
@@ -76,6 +85,9 @@
                                         <state key="normal" title="Pick...">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="pickButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OkD-s1-GP0"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yjN-zl-nPp">
                                         <rect key="frame" x="145.5" y="92" width="44" height="32"/>
@@ -83,6 +95,9 @@
                                         <state key="normal" title="Apply">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="applyButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DVS-IP-laf"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRD-lN-cGN">
                                         <rect key="frame" x="281" y="12.5" width="34" height="29"/>
@@ -90,6 +105,9 @@
                                         <state key="normal" title="Clear">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="clearButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cop-0u-O40"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFa-nE-M2z">
                                         <rect key="frame" x="281" y="54.5" width="34" height="29"/>
@@ -97,6 +115,9 @@
                                         <state key="normal" title="Clear">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="clearButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Hs-L3-Llb"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94988268610000004" green="0.77392262219999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -123,12 +144,19 @@
                                 <subviews>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rCz-jE-uUT">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="dsd-Jw-08e"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="J8x-iJ-gdZ"/>
+                                        </connections>
                                     </pickerView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Rb-p8-bVQ">
                                         <rect key="frame" x="330" y="0.0" width="37" height="30"/>
                                         <state key="normal" title="Done">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="doneButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8bG-Kx-XlS"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94988268610000004" green="0.77392262219999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -144,6 +172,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="s5O-Gm-4uQ" secondAttribute="bottom" id="12q-gp-so9"/>
                             <constraint firstItem="gPQ-3Z-qxx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="45b-q7-yda"/>
@@ -163,9 +192,25 @@
                             <constraint firstItem="Ebb-Wi-3QG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="z82-r4-f3V"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="x7q-tg-7yD" appends="YES" id="a8L-yD-2Xv"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="filterView" destination="gPQ-3Z-qxx" id="OcI-Sp-uhD"/>
+                        <outlet property="pickerContentView" destination="s5O-Gm-4uQ" id="24I-yC-6Md"/>
+                        <outlet property="pickerView" destination="rCz-jE-uUT" id="6kP-sh-VqJ"/>
+                        <outlet property="searchTextField" destination="4RF-Sq-xTc" id="WEq-hi-K3A"/>
+                        <outlet property="typePickButton" destination="DVs-51-lB1" id="HNl-0e-8fI"/>
+                        <outlet property="yearPickButton" destination="vaa-mY-LSF" id="Hbo-HI-h2i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="x7q-tg-7yD">
+                    <connections>
+                        <action selector="viewTapped:" destination="BYZ-38-t0r" id="Xx7-xq-R6d"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
         </scene>
