@@ -22,10 +22,11 @@ final class SearchPresenter: SearchPresenterProtocol {
         self.router = router
         
         self.interactor.delegate = self
+        
+        view.handleOutput(.updateTitle("IMDb Search"))
     }
     
     func load(title: String, type: String?, year: String?) {
-        view.handleOutput(.updateTitle("IMDb Search"))
         interactor.load(title: title, type: type, year: year)
     }
 }
