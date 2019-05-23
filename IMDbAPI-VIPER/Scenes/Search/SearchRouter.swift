@@ -10,7 +10,7 @@ import UIKit
 
 final class SearchRouter: SearchRouterProtocol {
     
-    unowned let view: UIViewController
+    let view: UIViewController
     
     init(view: UIViewController) {
         self.view = view

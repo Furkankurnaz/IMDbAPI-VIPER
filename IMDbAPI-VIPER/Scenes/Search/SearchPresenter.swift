@@ -10,7 +10,7 @@ import Foundation
 
 final class SearchPresenter: SearchPresenterProtocol {
     
-    private unowned let view: SeachViewProtocol
+    private let view: SeachViewProtocol
     private let interactor: SearchInteractorProtocol
     private let router: SearchRouterProtocol
     
@@ -26,8 +26,28 @@ final class SearchPresenter: SearchPresenterProtocol {
         view.handleOutput(.updateTitle("IMDb Search"))
     }
     
+    func getYearDatas() {
+        interactor.getTypeDatas()
+    }
+    
+    func getTypeDatas() {
+        interactor.getYearDatas()
+    }
+    
     func load(title: String, type: String?, year: String?) {
         interactor.load(title: title, type: type, year: year)
+    }
+    
+    func validateNameField(name: String?) {
+        if let name = name {
+            if name.count > 0 {
+                view.handleOutput(.isValidName(true))
+            } else {
+                view.handleOutput(.isValidName(false))
+            }
+        } else {
+            view.handleOutput(.isValidName(false))
+        }
     }
 }
 
@@ -38,6 +58,10 @@ extension SearchPresenter: SearchInteractorDelegate {
             view.handleOutput(.setLoading(isLoading))
         case .showMediaList(let medias):
             view.handleOutput(.showMediaList(medias))
+        case .showYears(let years):
+            view.handleOutput(.showYears(years))
+        case .showTypes(let types):
+            view.handleOutput(.showTypes(types))
         }
     }
 }

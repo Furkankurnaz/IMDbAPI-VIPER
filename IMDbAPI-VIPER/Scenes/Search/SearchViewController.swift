@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchViewController: UIViewController, SeachViewProtocol {
+final class SearchViewController: UIViewController, SeachViewProtocol {
     
     // MARK: - Outlets
     
@@ -23,12 +23,7 @@ class SearchViewController: UIViewController, SeachViewProtocol {
     
     // MARK: - Properties
     
-    private var types: [String] = [
-        "Movies",
-        "Series",
-        "Episode"
-    ]
-    
+    private var types: [String] = []
     private var years: [String] = []
     
     private var isFilterViewShowing: Bool = false
@@ -37,15 +32,25 @@ class SearchViewController: UIViewController, SeachViewProtocol {
     private var selectedType: String = ""
     private var selectedYear: String = ""
     
+    private var searchResults: SearchModel!
+    
+    private var isValidName: Bool = false {
+        didSet {
+            validateNameField()
+        }
+    }
+    
     var presenter: SearchPresenterProtocol!
     
-    var searchResults: SearchModel!
+    // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureView()
     }
+    
+    // MARK: - Handle Presenter Output
     
     func handleOutput(_ output: SearchPresenterOutput) {
         switch output {
@@ -55,6 +60,12 @@ class SearchViewController: UIViewController, SeachViewProtocol {
             UIApplication.shared.isNetworkActivityIndicatorVisible = isLoading
         case .showMediaList(let searchResults):
             self.searchResults = searchResults
+        case .showYears(let years):
+            self.years = years
+        case .showTypes(let types):
+            self.types = types
+        case .isValidName(let isValid):
+            self.isValidName = isValid
         }
     }
     
@@ -64,15 +75,8 @@ class SearchViewController: UIViewController, SeachViewProtocol {
         self.filterView.transform = CGAffineTransform(translationX: 0, y: self.view.bounds.height)
         hideFilterView()
         hidePickerView()
-        getPickerViewDatas()
-    }
-    
-    private func getPickerViewDatas() {
-        let currentYear = Calendar.current.component(.year, from: Date())
-            
-        for year in 1900 ... currentYear {
-            years.insert(String(year), at: 0)
-        }
+        presenter.getYearDatas()
+        presenter.getTypeDatas()
     }
     
     private func showFilterView() {
@@ -108,6 +112,14 @@ class SearchViewController: UIViewController, SeachViewProtocol {
         self.pickerContentView.transform = CGAffineTransform(translationX: 0, y: self.view.bounds.height)
     }
     
+    private func validateNameField() {
+        if !isValidName {
+            showAlert(title: "Error", message: "The name field cannot be blank.")
+        } else {
+            presenter.load(title: searchTextField.text ?? "", type: selectedType, year: selectedYear)
+        }
+    }
+    
     // MARK: - Actions
     
     @IBAction func searchButtonTapped(_ sender: UIButton) {
@@ -115,11 +127,7 @@ class SearchViewController: UIViewController, SeachViewProtocol {
         hideFilterView()
         searchTextField.resignFirstResponder()
         
-        if searchTextField.text?.count == 0 {
-            showAlert(title: "Error", message: "The name field cannot be blank.")
-        } else {
-            presenter.load(title: searchTextField.text ?? "", type: selectedType, year: selectedYear)
-        }
+        presenter.validateNameField(name: searchTextField.text)
     }
     
     @IBAction func filtersButtonTapped(_ sender: UIButton) {

@@ -10,7 +10,30 @@ import Foundation
 import Moya
 
 final class SearchInteractor: SearchInteractorProtocol {
+    
     weak var delegate: SearchInteractorDelegate?
+    
+    func getYearDatas() {
+        var years: [String] = []
+        
+        let currentYear = Calendar.current.component(.year, from: Date())
+        
+        for year in 1900 ... currentYear {
+            years.insert(String(year), at: 0)
+        }
+        
+        self.delegate?.handleOutput(.showYears(years))
+    }
+    
+    func getTypeDatas() {
+        let types: [String] = [
+            "Movies",
+            "Series",
+            "Episode"
+        ]
+        
+        self.delegate?.handleOutput(.showTypes(types))
+    }
     
     func load(title: String, type: String?, year: String?) {
         delegate?.handleOutput(.setLoading(true))
