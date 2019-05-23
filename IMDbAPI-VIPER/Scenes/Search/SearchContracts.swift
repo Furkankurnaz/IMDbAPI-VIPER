@@ -29,7 +29,7 @@ protocol SearchInteractorDelegate: class {
 
 enum SearchInteractorOutput {
     case setLoading(Bool)
-    case showMediaList(SearchModel)
+    case getMediaList(SearchModel)
     case showYears([String])
     case showTypes([String])
 }
@@ -41,12 +41,13 @@ protocol SearchPresenterProtocol: class {
     func getYearDatas()
     func getTypeDatas()
     func validateNameField(name: String?)
+    func showMediaList(medias: SearchModel)
 }
 
 enum SearchPresenterOutput {
     case updateTitle(String)
     case setLoading(Bool)
-    case showMediaList(SearchModel)
+    case getMediaList(SearchModel)
     case showYears([String])
     case showTypes([String])
     case isValidName(Bool)

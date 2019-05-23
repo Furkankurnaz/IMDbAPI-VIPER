@@ -49,6 +49,10 @@ final class SearchPresenter: SearchPresenterProtocol {
             view.handleOutput(.isValidName(false))
         }
     }
+    
+    func showMediaList(medias: SearchModel) {
+        router.navigate(to: .list(medias))
+    }
 }
 
 extension SearchPresenter: SearchInteractorDelegate {
@@ -56,8 +60,8 @@ extension SearchPresenter: SearchInteractorDelegate {
         switch output {
         case .setLoading(let isLoading):
             view.handleOutput(.setLoading(isLoading))
-        case .showMediaList(let medias):
-            view.handleOutput(.showMediaList(medias))
+        case .getMediaList(let medias):
+            view.handleOutput(.getMediaList(medias))
         case .showYears(let years):
             view.handleOutput(.showYears(years))
         case .showTypes(let types):

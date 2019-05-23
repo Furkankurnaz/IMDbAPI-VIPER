@@ -32,11 +32,9 @@ final class SearchViewController: UIViewController, SeachViewProtocol {
     private var selectedType: String = ""
     private var selectedYear: String = ""
     
-    private var searchResults: SearchModel!
-    
     private var isValidName: Bool = false {
         didSet {
-            validateNameField()
+            handleNameField()
         }
     }
     
@@ -58,8 +56,8 @@ final class SearchViewController: UIViewController, SeachViewProtocol {
             self.title = title
         case .setLoading(let isLoading):
             UIApplication.shared.isNetworkActivityIndicatorVisible = isLoading
-        case .showMediaList(let searchResults):
-            self.searchResults = searchResults
+        case .getMediaList(let searchResults):
+            self.presenter.showMediaList(medias: searchResults)
         case .showYears(let years):
             self.years = years
         case .showTypes(let types):
@@ -112,7 +110,7 @@ final class SearchViewController: UIViewController, SeachViewProtocol {
         self.pickerContentView.transform = CGAffineTransform(translationX: 0, y: self.view.bounds.height)
     }
     
-    private func validateNameField() {
+    private func handleNameField() {
         if !isValidName {
             showAlert(title: "Error", message: "The name field cannot be blank.")
         } else {

@@ -25,6 +25,12 @@
 		EA84A609228EA9B7009E7955 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA84A608228EA9B7009E7955 /* SearchPresenter.swift */; };
 		EA84A60B228EA9C6009E7955 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA84A60A228EA9C6009E7955 /* SearchRouter.swift */; };
 		EA84A60E228EAA92009E7955 /* IMDbAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA84A60D228EAA92009E7955 /* IMDbAPIService.swift */; };
+		EACE2BF222968E3400B2BFA1 /* MediaList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EACE2BEB22968E3400B2BFA1 /* MediaList.storyboard */; };
+		EACE2BF322968E3400B2BFA1 /* MediaListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACE2BEC22968E3400B2BFA1 /* MediaListPresenter.swift */; };
+		EACE2BF522968E3400B2BFA1 /* MediaListContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACE2BEE22968E3400B2BFA1 /* MediaListContracts.swift */; };
+		EACE2BF622968E3400B2BFA1 /* MediaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACE2BEF22968E3400B2BFA1 /* MediaListViewController.swift */; };
+		EACE2BF722968E3400B2BFA1 /* MediaListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACE2BF022968E3400B2BFA1 /* MediaListBuilder.swift */; };
+		EACE2BFB229692AF00B2BFA1 /* MediaListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACE2BFA229692AF00B2BFA1 /* MediaListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +56,12 @@
 		EA84A608228EA9B7009E7955 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
 		EA84A60A228EA9C6009E7955 /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
 		EA84A60D228EAA92009E7955 /* IMDbAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMDbAPIService.swift; sourceTree = "<group>"; };
+		EACE2BEB22968E3400B2BFA1 /* MediaList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MediaList.storyboard; sourceTree = "<group>"; };
+		EACE2BEC22968E3400B2BFA1 /* MediaListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListPresenter.swift; sourceTree = "<group>"; };
+		EACE2BEE22968E3400B2BFA1 /* MediaListContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListContracts.swift; sourceTree = "<group>"; };
+		EACE2BEF22968E3400B2BFA1 /* MediaListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListViewController.swift; sourceTree = "<group>"; };
+		EACE2BF022968E3400B2BFA1 /* MediaListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListBuilder.swift; sourceTree = "<group>"; };
+		EACE2BFA229692AF00B2BFA1 /* MediaListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				EA84A5F8228EA5E4009E7955 /* Search */,
+				EACE2BEA22968E1A00B2BFA1 /* MediaList */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -220,6 +233,27 @@
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
+		EACE2BEA22968E1A00B2BFA1 /* MediaList */ = {
+			isa = PBXGroup;
+			children = (
+				EACE2BEB22968E3400B2BFA1 /* MediaList.storyboard */,
+				EACE2BEF22968E3400B2BFA1 /* MediaListViewController.swift */,
+				EACE2BF022968E3400B2BFA1 /* MediaListBuilder.swift */,
+				EACE2BEE22968E3400B2BFA1 /* MediaListContracts.swift */,
+				EACE2BEC22968E3400B2BFA1 /* MediaListPresenter.swift */,
+				EACE2BF92296929B00B2BFA1 /* Cells */,
+			);
+			path = MediaList;
+			sourceTree = "<group>";
+		};
+		EACE2BF92296929B00B2BFA1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EACE2BFA229692AF00B2BFA1 /* MediaListTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -283,6 +317,7 @@
 				EA84A5E9228EA4EB009E7955 /* LaunchScreen.storyboard in Resources */,
 				EA84A5E6228EA4EB009E7955 /* Assets.xcassets in Resources */,
 				EA84A5E4228EA4EA009E7955 /* Search.storyboard in Resources */,
+				EACE2BF222968E3400B2BFA1 /* MediaList.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,8 +382,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA363BCE228EC0C00050F9B6 /* SearchModel.swift in Sources */,
+				EACE2BF722968E3400B2BFA1 /* MediaListBuilder.swift in Sources */,
+				EACE2BF622968E3400B2BFA1 /* MediaListViewController.swift in Sources */,
 				EA84A5E1228EA4EA009E7955 /* SearchViewController.swift in Sources */,
 				EA363BD0228EC0C60050F9B6 /* Media.swift in Sources */,
+				EACE2BF322968E3400B2BFA1 /* MediaListPresenter.swift in Sources */,
+				EACE2BF522968E3400B2BFA1 /* MediaListContracts.swift in Sources */,
 				EA84A5FC228EA6B0009E7955 /* AppContainer.swift in Sources */,
 				EA84A60E228EAA92009E7955 /* IMDbAPIService.swift in Sources */,
 				EA84A60B228EA9C6009E7955 /* SearchRouter.swift in Sources */,
@@ -358,6 +397,7 @@
 				EA84A603228EA98D009E7955 /* SearchBuilder.swift in Sources */,
 				EA84A5DF228EA4EA009E7955 /* AppDelegate.swift in Sources */,
 				EA84A5FE228EA7AC009E7955 /* BaseNavigationController.swift in Sources */,
+				EACE2BFB229692AF00B2BFA1 /* MediaListTableViewCell.swift in Sources */,
 				EA84A5FA228EA6A7009E7955 /* AppRouter.swift in Sources */,
 				EA84A605228EA99C009E7955 /* SearchContracts.swift in Sources */,
 			);

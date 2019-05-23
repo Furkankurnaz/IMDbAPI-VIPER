@@ -43,13 +43,15 @@ final class SearchInteractor: SearchInteractorProtocol {
         
         provider.request(.search(title: title, type: type, year: year)) { [weak self] response in
             guard let self = self else { return }
+            self.delegate?.handleOutput(.setLoading(false))
+            
             switch response {
             case .success(let value):
                 let data = value.data
                 
                 do {
                     let results = try JSONDecoder().decode(SearchModel.self, from: data)
-                    self.delegate?.handleOutput(.showMediaList(results))
+                    self.delegate?.handleOutput(.getMediaList(results))
                 } catch let error {
                     print(error)
                 }
